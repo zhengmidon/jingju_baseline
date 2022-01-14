@@ -1,0 +1,10 @@
+python3 preprocess.py --corpus_path corpora/jingju_revised.txt --vocab_path models/vocab.txt --tokenizer bert --dataset_path datasets/jingju.pt --processes_num 32 --seq_length 1008 --target lm
+					  
+nohup python3 pretrain.py --dataset_path datasets/jingju.pt --vocab_path models/vocab.txt --config_path config/jingju_config.json --output_model_path models/autodrama_model.bin --pretrained_model_path models/uer-ancient-chinese.bin --world_size 4 --gpu_ranks 0 1 2 3 --total_steps 30000 --save_checkpoint_steps 5000 --report_steps 200 --learning_rate 1e-4 --batch_size 5 --embedding word_pos --remove_embedding_layernorm --encoder transformer --mask causal --layernorm_positioning pre --target lm --tie_weights > train.log 2>&1 &
+
+python3 scripts/generate_lm.py --load_model_path models/autodrama_model.bin-30000 --vocab_path models/vocab.txt --test_path test/begging.txt --prediction_path test/generated_sentence.txt --config_path config/jingju_config.json --seq_length 1000 --embedding word_pos --remove_embedding_layernorm --encoder transformer --mask causal --layernorm_positioning pre --target lm --tie_weights
+
+export CUDA_VISIBLE_DEVICES=4,5,6,7
+data = pickle.load(open('datasets/jingju.pt','rb'))
+
+main_pid = 495966
