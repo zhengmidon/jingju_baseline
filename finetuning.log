@@ -1,0 +1,562 @@
+nohup: ignoring input
+Using GPU 0 for training.
+Selected optimization level O1:  Insert automatic casts around Pytorch functions and Tensor methods.
+
+Defaults for this optimization level are:
+enabled                : True
+opt_level              : O1
+cast_model_type        : None
+patch_torch_functions  : True
+keep_batchnorm_fp32    : None
+master_weights         : None
+loss_scale             : dynamic
+Processing user overrides (additional kwargs that are not None)...
+After processing overrides, optimization options are:
+enabled                : True
+opt_level              : O1
+cast_model_type        : None
+patch_torch_functions  : True
+keep_batchnorm_fp32    : None
+master_weights         : None
+loss_scale             : dynamic
+Worker is training ...
+/home3/midon/miniconda3/envs/NLP/lib/python3.8/site-packages/torch/optim/lr_scheduler.py:122: UserWarning: Seems like `optimizer.step()` has been overridden after learning rate scheduler initialization. Please, make sure to call `optimizer.step()` before `lr_scheduler.step()`. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  warnings.warn("Seems like `optimizer.step()` has been overridden after learning rate scheduler "
+|     1000/  100000 steps| 14071.82 tokens/s| loss    5.53| acc: 0.188
+------validating------
+validation loss:4.879089684688169
+time usage 57.40252614021301s
+------validation complete------
+|     2000/  100000 steps| 14100.14 tokens/s| loss    4.90| acc: 0.258
+------validating------
+validation loss:4.490028438164556
+time usage 57.36634373664856s
+------validation complete------
+Gradient overflow.  Skipping step, loss scaler 0 reducing loss scale to 65536.0
+|     3000/  100000 steps| 14006.17 tokens/s| loss    4.58| acc: 0.279
+------validating------
+validation loss:4.174941787740966
+time usage 57.878963470458984s
+------validation complete------
+|     4000/  100000 steps| 13979.04 tokens/s| loss    4.25| acc: 0.301
+------validating------
+validation loss:3.7817093683510423
+time usage 57.47017812728882s
+------validation complete------
+|     5000/  100000 steps| 13972.41 tokens/s| loss    3.94| acc: 0.339
+------validating------
+validation loss:3.600331609126985
+time usage 57.43608093261719s
+------validation complete------
+|     6000/  100000 steps| 13919.26 tokens/s| loss    3.78| acc: 0.355
+------validating------
+validation loss:3.4593839231206474
+time usage 57.486650466918945s
+------validation complete------
+Gradient overflow.  Skipping step, loss scaler 0 reducing loss scale to 131072.0
+|     7000/  100000 steps| 13986.83 tokens/s| loss    3.65| acc: 0.369
+------validating------
+validation loss:3.328431491065928
+time usage 57.86117219924927s
+------validation complete------
+Gradient overflow.  Skipping step, loss scaler 0 reducing loss scale to 65536.0
+|     8000/  100000 steps| 13990.31 tokens/s| loss    3.53| acc: 0.382
+------validating------
+validation loss:3.210012156607579
+time usage 57.481489419937134s
+------validation complete------
+|     9000/  100000 steps| 13976.72 tokens/s| loss    3.41| acc: 0.396
+------validating------
+validation loss:3.098692813801075
+time usage 57.47193932533264s
+------validation complete------
+|    10000/  100000 steps| 13972.94 tokens/s| loss    3.32| acc: 0.408
+------validating------
+validation loss:2.995948240326879
+time usage 57.447694301605225s
+------validation complete------
+Gradient overflow.  Skipping step, loss scaler 0 reducing loss scale to 65536.0
+|    11000/  100000 steps| 13893.09 tokens/s| loss    3.21| acc: 0.421
+------validating------
+validation loss:2.917448984753581
+time usage 57.69755458831787s
+------validation complete------
+|    12000/  100000 steps| 13989.37 tokens/s| loss    3.13| acc: 0.432
+------validating------
+validation loss:2.8561073724835913
+time usage 57.45867443084717s
+------validation complete------
+Gradient overflow.  Skipping step, loss scaler 0 reducing loss scale to 65536.0
+|    13000/  100000 steps| 13976.74 tokens/s| loss    3.06| acc: 0.442
+------validating------
+validation loss:2.8025349928169847
+time usage 57.4699501991272s
+------validation complete------
+|    14000/  100000 steps| 13972.99 tokens/s| loss    3.00| acc: 0.450
+------validating------
+validation loss:2.7562108438105253
+time usage 57.464481353759766s
+------validation complete------
+|    15000/  100000 steps| 13987.45 tokens/s| loss    2.95| acc: 0.457
+------validating------
+validation loss:2.713123555172791
+time usage 57.479074239730835s
+------validation complete------
+|    16000/  100000 steps| 13971.14 tokens/s| loss    2.91| acc: 0.462
+------validating------
+validation loss:2.675306117879787
+time usage 57.486844539642334s
+------validation complete------
+|    17000/  100000 steps| 13907.31 tokens/s| loss    2.85| acc: 0.471
+------validating------
+validation loss:2.640691141774235
+time usage 57.4383225440979s
+------validation complete------
+Gradient overflow.  Skipping step, loss scaler 0 reducing loss scale to 131072.0
+|    18000/  100000 steps| 13970.22 tokens/s| loss    2.81| acc: 0.476
+------validating------
+validation loss:2.6097396184713113
+time usage 57.47621393203735s
+------validation complete------
+|    19000/  100000 steps| 13995.38 tokens/s| loss    2.78| acc: 0.481
+------validating------
+validation loss:2.5818821677651864
+time usage 57.4487578868866s
+------validation complete------
+Gradient overflow.  Skipping step, loss scaler 0 reducing loss scale to 131072.0
+|    20000/  100000 steps| 13978.30 tokens/s| loss    2.75| acc: 0.485
+------validating------
+validation loss:2.556890229605354
+time usage 57.47673153877258s
+------validation complete------
+|    21000/  100000 steps| 13952.26 tokens/s| loss    2.71| acc: 0.491
+------validating------
+validation loss:2.5320240490155124
+time usage 57.46784234046936s
+------validation complete------
+|    22000/  100000 steps| 13910.56 tokens/s| loss    2.67| acc: 0.495
+------validating------
+validation loss:2.5071211025815763
+time usage 57.40637397766113s
+------validation complete------
+|    23000/  100000 steps| 13991.41 tokens/s| loss    2.64| acc: 0.499
+------validating------
+validation loss:2.4846244269861675
+time usage 57.46937108039856s
+------validation complete------
+|    24000/  100000 steps| 13978.22 tokens/s| loss    2.62| acc: 0.502
+------validating------
+validation loss:2.464280110956035
+time usage 57.44524788856506s
+------validation complete------
+Gradient overflow.  Skipping step, loss scaler 0 reducing loss scale to 262144.0
+Gradient overflow.  Skipping step, loss scaler 0 reducing loss scale to 131072.0
+|    25000/  100000 steps| 13972.96 tokens/s| loss    2.59| acc: 0.507
+------validating------
+validation loss:2.443507424972636
+time usage 57.47352623939514s
+------validation complete------
+|    26000/  100000 steps| 13992.94 tokens/s| loss    2.56| acc: 0.510
+------validating------
+validation loss:2.424327012956275
+time usage 57.466052293777466s
+------validation complete------
+|    27000/  100000 steps| 13950.74 tokens/s| loss    2.55| acc: 0.512
+------validating------
+validation loss:2.4066441013977626
+time usage 57.43247437477112s
+------validation complete------
+|    28000/  100000 steps| 13798.79 tokens/s| loss    2.51| acc: 0.517
+------validating------
+validation loss:2.3902566180728324
+time usage 57.61111259460449s
+------validation complete------
+|    29000/  100000 steps| 14013.99 tokens/s| loss    2.49| acc: 0.520
+------validating------
+validation loss:2.375218664086476
+time usage 57.53460669517517s
+------validation complete------
+Gradient overflow.  Skipping step, loss scaler 0 reducing loss scale to 262144.0
+|    30000/  100000 steps| 14033.33 tokens/s| loss    2.47| acc: 0.522
+------validating------
+validation loss:2.359688930362795
+time usage 57.557713985443115s
+------validation complete------
+|    31000/  100000 steps| 13935.29 tokens/s| loss    2.45| acc: 0.526
+------validating------
+validation loss:2.3421062358503617
+time usage 57.52926206588745s
+------validation complete------
+Gradient overflow.  Skipping step, loss scaler 0 reducing loss scale to 262144.0
+|    32000/  100000 steps| 14015.87 tokens/s| loss    2.43| acc: 0.529
+------validating------
+validation loss:2.3280131203560095
+time usage 57.486581325531006s
+------validation complete------
+|    33000/  100000 steps| 14003.97 tokens/s| loss    2.41| acc: 0.531
+------validating------
+validation loss:2.3160379469261936
+time usage 57.49499154090881s
+------validation complete------
+Gradient overflow.  Skipping step, loss scaler 0 reducing loss scale to 262144.0
+|    34000/  100000 steps| 14096.28 tokens/s| loss    2.40| acc: 0.532
+------validating------
+validation loss:2.3035548022701375
+time usage 57.46374559402466s
+------validation complete------
+Gradient overflow.  Skipping step, loss scaler 0 reducing loss scale to 131072.0
+|    35000/  100000 steps| 14092.06 tokens/s| loss    2.36| acc: 0.537
+------validating------
+validation loss:2.2912349459323162
+time usage 57.496012449264526s
+------validation complete------
+|    36000/  100000 steps| 14089.99 tokens/s| loss    2.35| acc: 0.539
+------validating------
+validation loss:2.2776429618652787
+time usage 57.490050315856934s
+------validation complete------
+|    37000/  100000 steps| 14107.85 tokens/s| loss    2.33| acc: 0.542
+------validating------
+validation loss:2.2688724840669696
+time usage 57.460399866104126s
+------validation complete------
+|    38000/  100000 steps| 14043.14 tokens/s| loss    2.32| acc: 0.544
+------validating------
+validation loss:2.256474398026753
+time usage 57.483245611190796s
+------validation complete------
+Gradient overflow.  Skipping step, loss scaler 0 reducing loss scale to 262144.0
+|    39000/  100000 steps| 14032.35 tokens/s| loss    2.30| acc: 0.547
+------validating------
+validation loss:2.2474398764310806
+time usage 57.457796573638916s
+------validation complete------
+|    40000/  100000 steps| 14091.70 tokens/s| loss    2.28| acc: 0.548
+------validating------
+validation loss:2.235028459659398
+time usage 57.49665856361389s
+------validation complete------
+|    41000/  100000 steps| 14083.43 tokens/s| loss    2.26| acc: 0.552
+------validating------
+validation loss:2.2291822839685964
+time usage 57.46773934364319s
+------validation complete------
+Gradient overflow.  Skipping step, loss scaler 0 reducing loss scale to 262144.0
+|    42000/  100000 steps| 14082.87 tokens/s| loss    2.26| acc: 0.552
+------validating------
+validation loss:2.2208743772421755
+time usage 57.482184648513794s
+------validation complete------
+|    43000/  100000 steps| 14093.70 tokens/s| loss    2.25| acc: 0.553
+------validating------
+validation loss:2.210167072663594
+time usage 57.484875440597534s
+------validation complete------
+Gradient overflow.  Skipping step, loss scaler 0 reducing loss scale to 262144.0
+|    44000/  100000 steps| 14017.53 tokens/s| loss    2.22| acc: 0.557
+------validating------
+validation loss:2.2010677423668334
+time usage 57.47490882873535s
+------validation complete------
+|    45000/  100000 steps| 14103.69 tokens/s| loss    2.21| acc: 0.558
+------validating------
+validation loss:2.1965785307979795
+time usage 57.48515844345093s
+------validation complete------
+|    46000/  100000 steps| 14020.03 tokens/s| loss    2.19| acc: 0.560
+------validating------
+validation loss:2.1913587006269424
+time usage 57.46396017074585s
+------validation complete------
+Gradient overflow.  Skipping step, loss scaler 0 reducing loss scale to 262144.0
+Gradient overflow.  Skipping step, loss scaler 0 reducing loss scale to 131072.0
+|    47000/  100000 steps| 14079.86 tokens/s| loss    2.18| acc: 0.562
+------validating------
+validation loss:2.1760905365104932
+time usage 57.47639083862305s
+------validation complete------
+|    48000/  100000 steps| 14102.56 tokens/s| loss    2.17| acc: 0.563
+------validating------
+validation loss:2.1740762900668953
+time usage 57.487730741500854s
+------validation complete------
+|    49000/  100000 steps| 14065.17 tokens/s| loss    2.15| acc: 0.566
+------validating------
+validation loss:2.1724407404727555
+time usage 57.47322082519531s
+------validation complete------
+Gradient overflow.  Skipping step, loss scaler 0 reducing loss scale to 131072.0
+|    50000/  100000 steps| 14014.76 tokens/s| loss    2.14| acc: 0.567
+------validating------
+validation loss:2.166031044947278
+time usage 57.521443128585815s
+------validation complete------
+|    51000/  100000 steps| 14017.00 tokens/s| loss    2.14| acc: 0.568
+------validating------
+validation loss:2.1581293862221766
+time usage 57.47393751144409s
+------validation complete------
+|    52000/  100000 steps| 14094.80 tokens/s| loss    2.11| acc: 0.572
+------validating------
+validation loss:2.1532162159747696
+time usage 57.486469745635986s
+------validation complete------
+|    53000/  100000 steps| 14092.81 tokens/s| loss    2.11| acc: 0.573
+------validating------
+validation loss:2.1512633487748145
+time usage 57.4539999961853s
+------validation complete------
+|    54000/  100000 steps| 14079.79 tokens/s| loss    2.11| acc: 0.572
+------validating------
+validation loss:2.142715176920052
+time usage 57.482611894607544s
+------validation complete------
+|    55000/  100000 steps| 14009.37 tokens/s| loss    2.09| acc: 0.576
+------validating------
+validation loss:2.1448124121451433
+time usage 57.45812773704529s
+------validation complete------
+Gradient overflow.  Skipping step, loss scaler 0 reducing loss scale to 524288.0
+|    56000/  100000 steps| 14098.75 tokens/s| loss    2.09| acc: 0.575
+------validating------
+validation loss:2.1354806356812372
+time usage 57.48013234138489s
+------validation complete------
+Gradient overflow.  Skipping step, loss scaler 0 reducing loss scale to 262144.0
+|    57000/  100000 steps| 14069.68 tokens/s| loss    2.07| acc: 0.578
+------validating------
+validation loss:2.1344246933348727
+time usage 57.46616053581238s
+------validation complete------
+|    58000/  100000 steps| 14081.52 tokens/s| loss    2.07| acc: 0.578
+------validating------
+validation loss:2.130786235985618
+time usage 57.485193967819214s
+------validation complete------
+Gradient overflow.  Skipping step, loss scaler 0 reducing loss scale to 262144.0
+|    59000/  100000 steps| 14111.66 tokens/s| loss    2.05| acc: 0.580
+------validating------
+validation loss:2.12481734216346
+time usage 57.438982009887695s
+------validation complete------
+|    60000/  100000 steps| 14076.03 tokens/s| loss    2.04| acc: 0.582
+------validating------
+validation loss:2.1243625996107514
+time usage 57.46982288360596s
+------validation complete------
+|    61000/  100000 steps| 14016.94 tokens/s| loss    2.03| acc: 0.583
+------validating------
+validation loss:2.1224911974904797
+time usage 57.460392475128174s
+------validation complete------
+|    62000/  100000 steps| 14093.93 tokens/s| loss    2.03| acc: 0.584
+------validating------
+validation loss:2.1171132790750278
+time usage 57.465301275253296s
+------validation complete------
+|    63000/  100000 steps| 14114.12 tokens/s| loss    2.01| acc: 0.586
+------validating------
+validation loss:2.114098561367638
+time usage 57.47006607055664s
+------validation complete------
+Gradient overflow.  Skipping step, loss scaler 0 reducing loss scale to 524288.0
+|    64000/  100000 steps| 14096.57 tokens/s| loss    2.01| acc: 0.587
+------validating------
+validation loss:2.1107898655872304
+time usage 57.45022678375244s
+------validation complete------
+Gradient overflow.  Skipping step, loss scaler 0 reducing loss scale to 262144.0
+|    65000/  100000 steps| 14087.22 tokens/s| loss    2.01| acc: 0.586
+------validating------
+validation loss:2.107543779375293
+time usage 57.48745155334473s
+------validation complete------
+|    66000/  100000 steps| 14019.70 tokens/s| loss    2.00| acc: 0.588
+------validating------
+validation loss:2.1091480332121817
+time usage 57.469651222229004s
+------validation complete------
+|    67000/  100000 steps| 14103.23 tokens/s| loss    1.98| acc: 0.590
+------validating------
+validation loss:2.110781972817164
+time usage 57.48744297027588s
+------validation complete------
+Gradient overflow.  Skipping step, loss scaler 0 reducing loss scale to 262144.0
+|    68000/  100000 steps| 14094.69 tokens/s| loss    1.98| acc: 0.591
+------validating------
+validation loss:2.1088383532313832
+time usage 57.49824118614197s
+------validation complete------
+|    69000/  100000 steps| 14084.06 tokens/s| loss    1.97| acc: 0.593
+------validating------
+validation loss:2.100531069897862
+time usage 57.51350235939026s
+------validation complete------
+Gradient overflow.  Skipping step, loss scaler 0 reducing loss scale to 262144.0
+|    70000/  100000 steps| 14108.39 tokens/s| loss    1.97| acc: 0.592
+------validating------
+validation loss:2.0974326208067895
+time usage 57.90397906303406s
+------validation complete------
+|    71000/  100000 steps| 14066.27 tokens/s| loss    1.96| acc: 0.594
+------validating------
+validation loss:2.1012177746120697
+time usage 57.46544599533081s
+------validation complete------
+|    72000/  100000 steps| 14042.26 tokens/s| loss    1.94| acc: 0.596
+------validating------
+validation loss:2.0931568647546066
+time usage 57.469998598098755s
+------validation complete------
+Gradient overflow.  Skipping step, loss scaler 0 reducing loss scale to 262144.0
+|    73000/  100000 steps| 14092.14 tokens/s| loss    1.94| acc: 0.596
+------validating------
+validation loss:2.09525766192141
+time usage 57.47080874443054s
+------validation complete------
+|    74000/  100000 steps| 14152.64 tokens/s| loss    1.94| acc: 0.597
+------validating------
+validation loss:2.093731570615535
+time usage 57.47593951225281s
+------validation complete------
+|    75000/  100000 steps| 14142.10 tokens/s| loss    1.92| acc: 0.600
+------validating------
+validation loss:2.093329508214326
+time usage 57.48988676071167s
+------validation complete------
+Gradient overflow.  Skipping step, loss scaler 0 reducing loss scale to 262144.0
+Gradient overflow.  Skipping step, loss scaler 0 reducing loss scale to 131072.0
+|    76000/  100000 steps| 14073.32 tokens/s| loss    1.94| acc: 0.597
+------validating------
+validation loss:2.09040046428519
+time usage 57.46486973762512s
+------validation complete------
+|    77000/  100000 steps| 13989.87 tokens/s| loss    1.92| acc: 0.599
+------validating------
+validation loss:2.0916897597450985
+time usage 57.48616671562195s
+------validation complete------
+Gradient overflow.  Skipping step, loss scaler 0 reducing loss scale to 131072.0
+|    78000/  100000 steps| 14107.30 tokens/s| loss    1.91| acc: 0.601
+------validating------
+validation loss:2.088489180683824
+time usage 57.884764432907104s
+------validation complete------
+|    79000/  100000 steps| 14109.01 tokens/s| loss    1.90| acc: 0.602
+------validating------
+validation loss:2.0881289211838174
+time usage 57.474761962890625s
+------validation complete------
+|    80000/  100000 steps| 14098.68 tokens/s| loss    1.89| acc: 0.603
+------validating------
+validation loss:2.081872262243173
+time usage 57.50051808357239s
+------validation complete------
+|    81000/  100000 steps| 14063.49 tokens/s| loss    1.89| acc: 0.603
+------validating------
+validation loss:2.0823590426243226
+time usage 57.468770265579224s
+------validation complete------
+|    82000/  100000 steps| 14032.08 tokens/s| loss    1.88| acc: 0.606
+------validating------
+validation loss:2.0866307596321363
+time usage 57.76189160346985s
+------validation complete------
+|    83000/  100000 steps| 14109.62 tokens/s| loss    1.87| acc: 0.606
+------validating------
+validation loss:2.0855262069765867
+time usage 57.454551458358765s
+------validation complete------
+Gradient overflow.  Skipping step, loss scaler 0 reducing loss scale to 524288.0
+|    84000/  100000 steps| 14087.52 tokens/s| loss    1.87| acc: 0.606
+------validating------
+validation loss:2.0782248047253074
+time usage 57.4697790145874s
+------validation complete------
+|    85000/  100000 steps| 14093.17 tokens/s| loss    1.87| acc: 0.607
+------validating------
+validation loss:2.0850729655582283
+time usage 57.47001338005066s
+------validation complete------
+|    86000/  100000 steps| 14103.24 tokens/s| loss    1.86| acc: 0.608
+------validating------
+validation loss:2.079857876146822
+time usage 57.469300270080566s
+------validation complete------
+Gradient overflow.  Skipping step, loss scaler 0 reducing loss scale to 524288.0
+Gradient overflow.  Skipping step, loss scaler 0 reducing loss scale to 262144.0
+|    87000/  100000 steps| 14093.99 tokens/s| loss    1.85| acc: 0.609
+------validating------
+validation loss:2.0784273583002237
+time usage 57.499516248703s
+------validation complete------
+|    88000/  100000 steps| 14020.00 tokens/s| loss    1.84| acc: 0.611
+------validating------
+validation loss:2.0789189251069238
+time usage 57.46022963523865s
+------validation complete------
+|    89000/  100000 steps| 14109.64 tokens/s| loss    1.83| acc: 0.613
+------validating------
+validation loss:2.0856099099518195
+time usage 57.89945411682129s
+------validation complete------
+Gradient overflow.  Skipping step, loss scaler 0 reducing loss scale to 262144.0
+|    90000/  100000 steps| 14110.78 tokens/s| loss    1.84| acc: 0.611
+------validating------
+validation loss:2.0780214862462407
+time usage 57.468125343322754s
+------validation complete------
+|    91000/  100000 steps| 14064.01 tokens/s| loss    1.84| acc: 0.612
+------validating------
+validation loss:2.0816345368833478
+time usage 57.46291732788086s
+------validation complete------
+|    92000/  100000 steps| 14090.54 tokens/s| loss    1.84| acc: 0.611
+------validating------
+validation loss:2.080140063120156
+time usage 57.4868803024292s
+------validation complete------
+|    93000/  100000 steps| 14017.89 tokens/s| loss    1.81| acc: 0.615
+------validating------
+validation loss:2.0833254078183248
+time usage 57.46986651420593s
+------validation complete------
+Gradient overflow.  Skipping step, loss scaler 0 reducing loss scale to 524288.0
+|    94000/  100000 steps| 14113.14 tokens/s| loss    1.80| acc: 0.617
+------validating------
+validation loss:2.0762376732178414
+time usage 57.458436489105225s
+------validation complete------
+|    95000/  100000 steps| 14097.62 tokens/s| loss    1.82| acc: 0.614
+------validating------
+validation loss:2.0798845814171774
+time usage 57.441622495651245s
+------validation complete------
+Gradient overflow.  Skipping step, loss scaler 0 reducing loss scale to 524288.0
+Gradient overflow.  Skipping step, loss scaler 0 reducing loss scale to 262144.0
+|    96000/  100000 steps| 14091.39 tokens/s| loss    1.81| acc: 0.616
+------validating------
+validation loss:2.072934587973529
+time usage 57.46870470046997s
+------validation complete------
+|    97000/  100000 steps| 14115.07 tokens/s| loss    1.80| acc: 0.617
+------validating------
+validation loss:2.0746758961199654
+time usage 57.465636253356934s
+------validation complete------
+|    98000/  100000 steps| 14090.50 tokens/s| loss    1.79| acc: 0.619
+------validating------
+validation loss:2.0741631169627133
+time usage 57.480628490448s
+------validation complete------
+|    99000/  100000 steps| 14012.04 tokens/s| loss    1.79| acc: 0.620
+------validating------
+validation loss:2.0730586569665004
+time usage 57.48599147796631s
+------validation complete------
+Gradient overflow.  Skipping step, loss scaler 0 reducing loss scale to 262144.0
+|   100000/  100000 steps| 14098.78 tokens/s| loss    1.78| acc: 0.620
+------validating------
+validation loss:2.077555839096783
+time usage 57.453083515167236s
+------validation complete------
