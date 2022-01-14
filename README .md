@@ -10,8 +10,8 @@ jingju_baseline/
 	|-- corpora/ 		#corpora files
 	|-- models/ 		# vocab file, model checkpoints and some necessary files
 	|-- scripts/ 		# several functional scripts
-	|-- test/ 			#test files
-	|-- uer/ 			#files from UER-py
+	|-- test/ 		#test files
+	|-- uer/ 		#files from UER-py
 ```
 ### Environment Preparation
 Our baseline model is fineturned with a pretraining framework [UER-py](https://github.com/dbiir/UER-py). Refer to the [part](https://github.com/dbiir/UER-py#requirements) for environment requirements.
