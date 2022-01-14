@@ -1,10 +1,16 @@
-python3 preprocess.py --corpus_path corpora/jingju_revised.txt --vocab_path models/vocab.txt --tokenizer bert --dataset_path datasets/jingju.pt --processes_num 32 --seq_length 1008 --target lm
-					  
-nohup python3 pretrain.py --dataset_path datasets/jingju.pt --vocab_path models/vocab.txt --config_path config/jingju_config.json --output_model_path models/autodrama_model.bin --pretrained_model_path models/uer-ancient-chinese.bin --world_size 4 --gpu_ranks 0 1 2 3 --total_steps 30000 --save_checkpoint_steps 5000 --report_steps 200 --learning_rate 1e-4 --batch_size 5 --embedding word_pos --remove_embedding_layernorm --encoder transformer --mask causal --layernorm_positioning pre --target lm --tie_weights > train.log 2>&1 &
+python3 preprocess.py --corpus_path corpora/jingju_dev.txt --vocab_path models/vocab.txt --tokenizer bert --dataset_path datasets/jingju_dev.pt --processes_num 32 --seq_length 1024 --target lm
 
-python3 scripts/generate_lm.py --load_model_path models/autodrama_model.bin-30000 --vocab_path models/vocab.txt --test_path test/begging.txt --prediction_path test/generated_sentence.txt --config_path config/jingju_config.json --seq_length 1000 --embedding word_pos --remove_embedding_layernorm --encoder transformer --mask causal --layernorm_positioning pre --target lm --tie_weights
+#long finetuning					  
+nohup python -u finetuning.py --dataset_path datasets/jingju_train.pt --devset_path datasets/jingju_dev.pt --vocab_path models/vocab.txt --config_path config/jingju_config.json --output_model_path models/increment_autodrama_model_long.bin --pretrained_model_path models/uer-ancient-chinese.bin --world_size 3 --gpu_ranks 0 1 2   --total_steps 60000 --save_checkpoint_steps 5000 --report_steps 500 --learning_rate 1e-4 --batch_size 1 --accumulation_steps 5 --embedding word --relative_position_embedding  --remove_embedding_layernorm --encoder transformer --mask causal --layernorm_positioning pre --target lm --tie_weights > increment_train_long.log 2>&1 &
 
-export CUDA_VISIBLE_DEVICES=4,5,6,7
-data = pickle.load(open('datasets/jingju.pt','rb'))
+#short finetuning
+nohup python3 -u finetuning.py --dataset_path datasets/jingju_train.pt --devset_path datasets/jingju_dev.pt --vocab_path models/vocab.txt --config_path config/jingju_config.json --output_model_path models/finetuned_model.bin --pretrained_model_path models/uer-ancient-chinese.bin --world_size 1 --gpu_ranks 0  --total_steps 100000 --save_checkpoint_steps 50000 --report_steps 1000 --learning_rate 5e-5 --batch_size 5 --accumulation_steps 4 --embedding word_pos  --fp16 --fp16_opt_level O1 --remove_embedding_layernorm --encoder transformer --mask causal --layernorm_positioning pre --target lm --tie_weights > fineturning.log 2>&1 &
 
-main_pid = 495966
+#long generation
+nohup python3 -u scripts/long_generate_lm.py --load_model_path models/singe_plot_model.bin-75000 --vocab_path models/vocab.txt --test_path test/begging.txt --prediction_path test/75000_sentences_2.txt --config_path config/jingju_config.json --seq_length 3096 --embedding word_pos --remove_embedding_layernorm --encoder transformer --mask causal --layernorm_positioning pre --target lm --tie_weights > no_plot_generate_log.log 2>&1 &
+
+#short generation
+nohup python3 -u jingju_test.py --load_model_path models/finetuned_model.bin-100000 --vocab_path models/vocab.txt --beginning_path test/jingju_beginning.txt  --reference_path test/jingju_reference.txt --prediction_path test/jingju_candidates.txt --test_path test/jingju_beginning.txt --testset_path datasets/jingju_test.pt --config_path config/jingju_config.json --seq_length 1024 --embedding word_pos --remove_embedding_layernorm --encoder transformer --mask causal --layernorm_positioning pre --target lm --tie_weights > test_candidate_generation.log 2>&1 &
+
+export CUDA_VISIBLE_DEVICES=6
+
